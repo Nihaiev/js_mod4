@@ -159,3 +159,42 @@
     
 // }
 // fetch('https://pokeapi.co/api/v2/pokemon').then(res => res.json()).then(onRequstSuccess);
+
+
+//! Example 7
+
+/**
+ * Функція Фільтр для фільтрації масиву 
+ * 
+ */
+
+const filter = function (array, test) {
+    const filterArray = [];
+    for (const el of array) { // перебрали масив
+        console.log(el);
+        // console.log(test(el));
+        const passed = test(el);
+        if (passed) {
+            filterArray.push(el)
+        }
+    }
+    return filterArray;
+}
+
+//1. треба передати функцію
+// 2. функція отримує елемент масиву
+// 3. якщо елемент масиву відповідає умові то функція поверне true
+// 4.якщо елемент масиву НЕ відповідає умові то функція поверне false
+
+const callback1 = function (value) {
+    return value >= 3;
+}
+
+const r1 = filter([1, 2, 3, 4, 5], callback1);
+console.log(r1);
+const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], function (value) {
+    return value <= 4;
+})
+console.log(r2);
+
+
