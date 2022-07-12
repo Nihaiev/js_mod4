@@ -136,11 +136,26 @@
  * через 2 секунди, для цього є спеціальна констукція setTimeout
  */
 
-const callback = function () {
-    console.log('Через 2 секунди в середині колбека в таймауті');
-}
-console.log('Перед таймаутом');
-setTimeout(callback, 2000);
+// const callback = function () {
+//     console.log('Через 2 секунди в середині колбека в таймауті');
+// }
+// console.log('Перед таймаутом');
+// setTimeout(callback, 2000);
 
-console.log('Після таймаута');
+// console.log('Після таймаута');
 
+
+//! Example 6
+
+/**
+ * Рельний приклад по роботі з бекендом
+ * 
+ */
+//https://pokeapi.co/api/v2/pokemon
+
+
+// const onRequstSuccess = function (response) {
+//     console.log(response);
+    
+// }
+// fetch('https://pokeapi.co/api/v2/pokemon').then(res => res.json()).then(onRequstSuccess);
