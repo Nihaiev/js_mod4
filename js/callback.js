@@ -91,11 +91,11 @@
 // const handleBtnClisk = function () {
 //     console.log('Клік по кнопці' + Date.now());
 // }
-// buttonRef.addEventListener('click', handleBtnClisk); 
+// buttonRef.addEventListener('click', handleBtnClisk);
 
 /**як написати код який відбудеться якось потім 
  * завернути його у функцію і зареєструвати його як callback
- *  */  
+ *  */
 
 // ?ми можемо зробити це Інлайново
 // const buttonRef = document.querySelector('.js-button');
@@ -104,3 +104,21 @@
 // buttonRef.addEventListener('click', function () {
 //     console.log('Клік по кнопці' + Date.now());});
 
+//! Example 4
+
+/**
+ * отримання геопозиції користувача  
+ */
+/** у на на обєкті window є спеціальна властивість navigator
+ * в якому є властивість geolocation
+ * в якому є метод отримати поточну позицію getCurrentPosition();
+ *  */
+const onGetPositionSuccess = function (position) {
+    console.log('Це виклик onGetPositionSuccess');
+    console.log(position);
+}
+const onGetPositionError = function (error) {
+    console.log('Це виклик onGetPositionError');
+    console.log(error);
+}
+window.navigator.geolocation.getCurrentPosition(onGetPositionSuccess, onGetPositionError);
