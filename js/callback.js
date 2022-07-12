@@ -113,12 +113,34 @@
  * в якому є властивість geolocation
  * в якому є метод отримати поточну позицію getCurrentPosition();
  *  */
-const onGetPositionSuccess = function (position) {
-    console.log('Це виклик onGetPositionSuccess');
-    console.log(position);
+// const onGetPositionSuccess = function (position) {
+//     console.log('Це виклик onGetPositionSuccess');
+//     console.log(position);
+// }
+// const onGetPositionError = function (error) {
+//     console.log('Це виклик onGetPositionError');
+//     console.log(error);
+// }
+// window.navigator.geolocation.getCurrentPosition(onGetPositionSuccess, onGetPositionError);
+
+//! Example 5
+
+/**
+ * Відкладений виклик: інтервали  
+ * 
+ * Ми будемо проходити асинхронний JS це коли можна виконувати відклаений код 
+ * 
+ */
+/**
+ * у нас є console.log і я б хотів зареєструвати функцію яка б виконалась 
+ * через 2 секунди, для цього є спеціальна констукція setTimeout
+ */
+
+const callback = function () {
+    console.log('Через 2 секунди в середині колбека в таймауті');
 }
-const onGetPositionError = function (error) {
-    console.log('Це виклик onGetPositionError');
-    console.log(error);
-}
-window.navigator.geolocation.getCurrentPosition(onGetPositionSuccess, onGetPositionError);
+console.log('Перед таймаутом');
+setTimeout(callback, 2000);
+
+console.log('Після таймаута');
+
