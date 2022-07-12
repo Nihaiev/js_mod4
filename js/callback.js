@@ -6,10 +6,10 @@
  *  - Функція яка приймає іншу функцію як параметр або повертає
  *  функцію як результат своєї роботи, називається функцією вищого порядку
  * (fnA в прикладі - це функція вищого порядку)
- */ 
+ */
 
 //! Example1
-//callback - це просто назва змінної 
+//callback - це просто назва змінної
 // const fnA = function (message, callback) {
 //     console.log(message);
 //     console.log(callback);
@@ -34,7 +34,7 @@
     
 // }
 
-// const add = function (x, y) { 
+// const add = function (x, y) {
 //     return x + y;
 // }
 
@@ -70,5 +70,37 @@
 // }); //  це називається інлайн функція
 
 
+//! Example 3
 
+/**
+ * Як ми можемо виконати шматочок коду по умові або колись потім,
+ * нам потрібно обирнути його у функцію із цього прийшли функції зворотнього виклику
+ * тому що єдиний варіант завернути шматочок коду в перевикористовуваний контейнер - це функція
+ * тому все у нас у виглядуі callback функцій
+ */
+
+/** з допомогою document.querySelector ми можемо отримати посилання
+ * на якийсь елемент нашого html  js-button
+ * і все що ми робимо це отримуємо посилання на цю кнопочку 
+ *  */
+
+// реєстрація події, перший usecase
+// const buttonRef = document.querySelector('.js-button');
+// // console.log(buttonRef);
+
+// const handleBtnClisk = function () {
+//     console.log('Клік по кнопці' + Date.now());
+// }
+// buttonRef.addEventListener('click', handleBtnClisk); 
+
+/**як написати код який відбудеться якось потім 
+ * завернути його у функцію і зареєструвати його як callback
+ *  */  
+
+// ?ми можемо зробити це Інлайново
+// const buttonRef = document.querySelector('.js-button');
+// // console.log(buttonRef);
+
+// buttonRef.addEventListener('click', function () {
+//     console.log('Клік по кнопці' + Date.now());});
 
