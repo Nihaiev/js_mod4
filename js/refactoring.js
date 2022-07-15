@@ -140,13 +140,12 @@ const playerIdToUpdate = 'player-3';
  * оператор return це те ж саме присвоювання 
  */
 
-const updatePlayers = players.map((player) => {
-    return player.id === playerIdToUpdate  //тут з return ми можемо повернути або ...player, або :player;
+const updatePlayers = players.map(player => player.id === playerIdToUpdate  //тут з return ми можемо повернути або ...player, або :player;
         ? {
             ...player,
             timePlayed: player.timePlayed + 50,
         }
-        :player;
-})
+        :player,
+);
 
 console.table(updatePlayers);
