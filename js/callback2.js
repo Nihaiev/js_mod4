@@ -28,9 +28,23 @@ const doMath = function (a, b, callback) {
     console.log(result);
 }
 //літерал функції
-doMath(2, 3, function (x, y) { //інлайн функція (анонімна функція)
-    return x + y;
-})
-doMath(10,8, function (x, y) {
-    return x - y;
-})
+// doMath(2, 3, function (x, y) { //інлайн функція (анонімна функція)
+//     return x + y;
+// })
+// doMath(10,8, function (x, y) {
+//     return x - y;
+// })
+
+//відклаженний виклик: реєстрація подій
+
+/**
+ * З допомогою document.querySelector ми можемо отримати посилання на якийсь елемаент нашого html
+ */
+const buttonRef = document.querySelector('.js-button')
+const handleBtnClick = function () {
+    console.log('Клік по кнопці ' + Date.now());
+    
+}
+
+//добавляємо слухач події 
+buttonRef.addEventListener('click', handleBtnClick )
