@@ -17,3 +17,20 @@
 // }
  
 // fnA('Лог виклику fnA', fnB)
+
+/**
+ * функція зроби математику doMath (a,b, callback)
+ * 
+ */
+
+const doMath = function (a, b, callback) {
+    const result = callback(a, b)
+    console.log(result);
+}
+//літерал функції
+doMath(2, 3, function (x, y) { //інлайн функція (анонімна функція)
+    return x + y;
+})
+doMath(10,8, function (x, y) {
+    return x - y;
+})
