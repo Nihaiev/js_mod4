@@ -35,9 +35,11 @@ const doMath = function (a, b, callback) {
 //     return x - y;
 // })
 
-//відклаженний виклик: реєстрація подій
+
 
 /**
+ * відклаженний виклик: реєстрація подій
+ * 
  * З допомогою document.querySelector ми можемо отримати посилання на якийсь елемаент нашого html
  */
 const buttonRef = document.querySelector('.js-button')
@@ -45,6 +47,26 @@ const handleBtnClick = function () {
     console.log('Клік по кнопці ' + Date.now());
     
 }
-
 //добавляємо слухач події 
-buttonRef.addEventListener('click', handleBtnClick )
+buttonRef.addEventListener('click', handleBtnClick)
+
+
+/**
+ * Відкладений виклик: геолокація
+ */
+
+
+// const onGetPositionSuccess = function (position) {
+//     console.log(position);
+// }
+
+// const onGetPositionError = function (error) {
+//     console.log(error);
+// }
+// window.navigator.geolocation.getCurrentPosition(onGetPositionSuccess, onGetPositionError);
+
+/**
+ * відкладений виклик: інтервали 
+ */
+
+//todo 36
