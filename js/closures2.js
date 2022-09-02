@@ -9,4 +9,10 @@
 
 const fnA = function (parameter) {
   const innerVariable = 'Значення внутрішньої змінної функції fnA';
+  const innerFunction = function () {
+    console.log('Це виклик функції innerFunction');
+  };
+  return innerFunction;
 };
+
+// результатом роботи функції fnA повертаю функцію innerFunction
