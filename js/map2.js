@@ -23,9 +23,33 @@ const players = [
 ];
 
 const playerNames = players.map(player => player.name);
-console.log(playerNames);
+// console.log(playerNames);
 
 const playerIDs = players.map(player => player.id);
-console.log('playerIDs', playerIDs);
+// console.log('playerIDs', playerIDs);
 
-//13
+/**
+ * Увеличиваем кол-во поинтов каждого игрока на 10%
+ */
+
+const updateplayers = players.map(player => {
+  console.log(player);
+  return {
+    ...player,
+    points: player.points * 1.1,
+  };
+});
+// console.table(updateplayers);
+
+/**
+ *Збільшуємо кількість годин гравця по id
+ */
+
+const playerIdUpdate = 'player-3';
+
+const updatedPlayers = players.map(player => {
+  console.log(player.id);
+  if (playerIdUpdate === player.id) {
+    console.log('Ось ми знайшли того кого потрбіно обновити');
+  }
+});
