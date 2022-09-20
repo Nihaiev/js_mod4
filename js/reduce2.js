@@ -5,6 +5,11 @@
  * - Замінює все на світі, но використовувати треба з розумом
  */
 
-const number = [5, 10, 15, 20, 25];
+const numbers = [5, 10, 15, 20, 25];
 
-//1:07
+const total = numbers.reduce((acc, number) => {
+  console.log('number', number);
+  console.log('acc', acc);
+}, 0);
+
+console.log(total);
