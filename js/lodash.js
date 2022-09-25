@@ -71,3 +71,22 @@ const players = [
   { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
 ];
 console.log(_.sumBy(players, player => player.timePlayed)); //суму із масиву
+
+/**
+ * uniq() та UniqBy()
+ * sortedUniq() та sortedUniqBy()
+ */
+
+/**
+ * random()
+ *
+ */
+
+/**
+ * min() та max()
+ * minBy та maxBy()
+ */
+
+/**
+ * camelCase(), capitalize(), kebabCase()
+ */
