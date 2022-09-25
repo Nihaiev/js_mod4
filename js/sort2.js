@@ -41,4 +41,45 @@ const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
 // console.log('descSortedNumbers', descSortedNumbers);
 // console.log('numbers', numbers);
 
-//todo 16
+/**
+ * Кастомне сортування складних типів
+ *
+ */
+const players = [
+  { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+  { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+  { id: 'player-3', name: 'Kiwi', timePlayed: 230, online: true },
+  { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+  { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+];
+
+const sortedByBestPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+  return nextPlayer.timePlayed - prevPlayer.timePlayed;
+});
+console.table(sortedByBestPlayers);
+
+const sortedByWorstPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+  return prevPlayer.timePlayed - nextPlayer.timePlayed;
+});
+console.table(sortedByWorstPlayers);
+
+// кастомна функція сортування по імені
+
+const byName = [...players].sort((a, b) => {
+  const result = a.name[0] > b.name[0];
+  if (result) {
+    return 1;
+  }
+  if (!result) {
+    return -1;
+  }
+});
+
+console.table(byName);
+
+/**
+ * Метод charCodeAt() возвращает числовое значение Юникода для символа по указанному индексу
+ * (за исключением кодовых точек Юникода, больших 0x10000).
+ */
+const str = 'abc';
+console.log(str.charCodeAt(2));
